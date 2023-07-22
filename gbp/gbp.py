@@ -28,7 +28,7 @@ class gbp(BaseCog):
 
     async def get_latest_gbp(self):
         response = requests.get(
-            url="https://raw.githubusercontent.com/tgstation/tgstation/gbp-balances/.github/gbp-balances.toml"
+            url="https://raw.githubusercontent.com/cmss13-devs/cmss13/gbp-balances/.github/gbp-balances.toml"
         )
         content = response.text
 
@@ -138,7 +138,7 @@ class gbp(BaseCog):
     @commands.command()
     async def costs(self, ctx):
         response = requests.get(
-            url="https://raw.githubusercontent.com/tgstation/tgstation/master/.github/gbp.toml"
+            url="https://raw.githubusercontent.com/cmss13-devs/cmss13/master/.github/gbp.toml"
         )
         content = response.text
         result = toml.loads(content)
